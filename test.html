@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./test.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav id="nav__main">
+      <h1></h1>
+      <ul>
+        <li class="nav__main-item" data-sect="sect__event" data-cur="true">
+          CREATE EVENT
+        </li>
+        <li class="nav__main-item" data-sect="sect__image">UPLOAD IMAGE</li>
+        <li class="nav__main-item" data-sect="sect__songs">UPLOAD SONG</li>
+        <li class="nav__main-item" data-sect="sect__blog">BLOG</li>
+        <li class="nav__main-item" data-sect="sect__merch">ADD MERCH ITEM</li>
+        <li class="nav__main-item" data-sect="sect__bio">UPDATE BIO</li>
+      </ul>
+    </nav>
+
+    <section id="sect__event" class="current">
+      <form
+        enctype="application/x-www-form-urlencoded"
+        action="./create_event.php"
+        method="POST"
+        id="event"
+      ></form>
+
+      <div id="event__datetime" class="event__subsect">
+        <label for="event__date">Date:</label>
+        <input type="date" id="event__date" form="event" />
+
+        <label for="event__time">Time:</label>
+        <input type="time" id="event__time" form="event" />
+
+        <label for="event_venue-id">Venue:</label>
+        <input type="text" id="event_venue-id" form="event" />
+      </div>
+      <div id="event__general" class="event__subsect">
+        <label for="event__title">Title:</label>
+        <input type="text" id="event__title" form="event" />
+
+        <label for="event__cover">Cover:</label>
+        <input type="number" id="event__cover" form="event" />
+
+        <label for="event__descript">Description:</label>
+        <textarea
+          id="event__descript"
+          cols="30"
+          rows="10"
+          form="event"
+        ></textarea>
+      </div>
+      <div id="event__venue" class="event__subsect">
+        <label for="event__venue-address">Venue Address:</label>
+        <textarea
+          name=""
+          id="event__venue-address"
+          cols="30"
+          rows="2"
+        ></textarea>
+
+        <label for="event__venue-fb">Venue Facebook:</label>
+        <input type="text" name="" id="event__venue-fb" form="event" />
+
+        <label for="event__venue-site">Venue Website:</label>
+        <input type="text" name="" id="event__venue-site" form="event" />
+
+        <label for="event__venue-fb-event">Facebook Event:</label>
+        <input
+          type="text"
+          name=""
+          id="event__venue-fb-event"
+          placeholder="if applicable"
+          form="event"
+        />
+
+        <label for="event__venue-img">Upload Venue Logo:</label>
+        <input type="hidden" id="event__venue-img" />
+
+        <div class="img-place"></div>
+      </div>
+      <div id="event__bands" class="event__subsect">
+        <div class="event__subsect-bands">
+          <label for="event__band-name">Band Name:</label>
+          <input type="text" name="" id="event__band-name" />
+
+          <label for="event__band-fb">Band Facebook:</label>
+          <input type="text" name="" id="event__band-fb" />
+
+          <label for="event__band-site">Band Website:</label>
+          <input type="text" name="" id="event__band-site" />
+
+          <label for="event__band-img">Upload Band Logo:</label>
+          <input type="hidden" id="event__band-img" />
+
+          <div class="img-place"></div>
+        </div>
+      </div>
+      <div id="event__promo" class="event__subsect">
+        <label for="event__fb-event">Link Facebook Event:</label>
+        <input type="text" name="" id="event__fb-event" />
+
+        <div class="event__subsect-promo">
+          <label for="event__add-promo">Additional Promo:</label>
+          <input type="text" name="" id="event__add-promo" />
+        </div>
+
+        <label for="event__flyer">Upload Image (Flyer):</label>
+        <input type="hidden" id="event__flyer" />
+
+        <div class="img-place"></div>
+      </div>
+
+      <div id="nav__event">
+        <ul>
+          <li class="nav__event-item" data-sect="event__datetime">
+            <!--             <img src="../assets/svgs/calendar.svg" alt="" /> -->
+          </li>
+          <li class="nav__event-item" data-sect="event__general">
+            <!--             <img src="../assets/svgs/pen_in_box.svg" alt="" /> -->
+          </li>
+          <li class="nav__event-item" data-sect="event__venue">
+            <!--             <img src="../assets/svgs/locater_pin.svg" alt="" /> -->
+          </li>
+          <li class="nav__event-item" data-sect="event__bands">
+            <!--             <img src="../assets/svgs/8_notes.svg" alt="" /> -->
+          </li>
+          <li class="nav__event-item" data-sect="event__promo">
+            <!--             <img src="../assets/svgs/youtube-ish.svg" alt="" /> -->
+          </li>
+        </ul>
+      </div>
+      <script src="test.js"></script>
+    </section>
+  </body>
+</html>
